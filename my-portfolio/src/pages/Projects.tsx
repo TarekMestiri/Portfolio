@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import ProjectCard from "../components/ProjectCard";
-import { FiGithub } from "react-icons/fi";
+
 
 interface ProjectsProps {
   projectsRef: React.RefObject<HTMLDivElement>;

@@ -6,8 +6,12 @@ interface HomeProps {
 
 export default function Home({ projectsRef }: HomeProps) {
   return (
-    <section 
-      className="min-h-screen pt-24 relative overflow-hidden"
+     <motion.section
+      ref={projectsRef} // Added ref to the section element
+      id="projects"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      className="min-h-screen relative overflow-hidden"
       style={{
         backgroundImage: "url('/bmw bg.jpg')",
         backgroundSize: "cover",
@@ -160,6 +164,6 @@ export default function Home({ projectsRef }: HomeProps) {
           />
         ))}
       </motion.div>
-    </section>
+    </motion.section>
   );
 }

@@ -5,9 +5,11 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
-import  Footer  from './components/Footer';
+import Footer from './components/Footer';
+
 export default function App() {
-  const projectsRef = useRef<HTMLDivElement>(null);
+  // Remove the null possibility from the type
+  const projectsRef = useRef<HTMLDivElement>(null!); // Note the ! operator
 
   return (
     <Router>
@@ -20,7 +22,7 @@ export default function App() {
         <Route path="/about" element={<About />} />
         <Route 
           path="/projects" 
-          element={<Projects ref={projectsRef} />} 
+          element={<Projects projectsRef={projectsRef} />} // Changed from ref to projectsRef
         />
         <Route path="/contact" element={<Contact />} />
         <Route path="/" element={<Home projectsRef={projectsRef} />} />
