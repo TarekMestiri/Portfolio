@@ -12,7 +12,7 @@ const projects = [
     description: "Animated portfolio with React, Tailwind CSS, and Framer Motion showcasing my work",
     image: "/portfolio.png",
     tags: ["React", "Tailwind CSS", "Framer Motion"],
-    github: "https://github.com/TarekMestiri/portfolio"
+    github: "https://github.com/TarekMestiri/Portfolio"
   },
   {
     title: "Organization Microservice",
