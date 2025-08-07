@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom CSS with Tailwind directives */
+.animated-text {
+  @apply text-2xl font-bold text-cyan-500 animate-pulse;
+}
