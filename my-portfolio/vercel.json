@@ -1,0 +1,11 @@
+{
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/src/index.html"
+    }
+  ],
+  "staticFiles": {
+    "public": "src"
+  }
+}
