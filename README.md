@@ -1,69 +1,62 @@
-# React + TypeScript + Vite
+# Tarek Jlassi Monastiri - Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Portfolio Screenshot](/public/portfolio-screenshot.jpg)
 
-Currently, two official plugins are available:
+A high-performance, BMW-inspired developer portfolio showcasing my skills, projects, and professional journey. Built with React, TypeScript, and Tailwind CSS, featuring smooth animations with Framer Motion.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🌟 Features
 
-## Expanding the ESLint configuration
+- **BMW-Inspired Design**: Automotive-themed UI with precision engineering aesthetics
+- **Interactive Animations**: Smooth page transitions and hover effects
+- **Responsive Layout**: Fully responsive across all device sizes
+- **AI Chatbot**: Interactive assistant for visitor inquiries
+- **Project Showcase**: Detailed case studies of my work
+- **Contact Form**: Integrated with Formspree for reliable messaging
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🛠 Tech Stack
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+**Frontend:**
+- React
+- TypeScript
+- Tailwind CSS
+- Framer Motion (Animations)
+- React Icons
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+**Backend:**
+- Formspree (Contact form handling)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 🚀 Pages
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 1. Home/About
+- Professional introduction with BMW imagery
+- Skills categorized by expertise
+- Education background
+- Downloadable resume
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### 2. Projects
+- Interactive project cards with:
+  - Project images
+  - Detailed descriptions
+  - Technology tags
+  - GitHub links
+- BMW-themed background
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### 3. Contact
+- Functional contact form with:
+  - Form validation
+  - Success/error states
+  - Loading indicators
+- Direct social media links
+- BMW "angel eyes" inspired design elements
+
+## 🎨 Design Elements
+
+- **Color Scheme**: BMW-inspired blues, cyans, and red accents
+- **Typography**: Clean, modern fonts with automotive flair
+- **Animations**: 
+  - Smooth page transitions
+  - Interactive hover states
+  - BMW-inspired loading effects
+- **Visual Hierarchy**: Clear section organization with visual cues
+
+
