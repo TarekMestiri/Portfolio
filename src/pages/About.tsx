@@ -8,37 +8,37 @@ import {
   SiTypescript,
   SiCss3,
   SiSpring,
-  SiJavascript,
+  SiDocker,
+  SiGithubactions,
+  SiPostgresql,
 } from "react-icons/si";
+import { FaJava } from "react-icons/fa";
 
 export default function About() {
-  const skills = [
-    { name: "React", icon: <SiReact className="text-[#61DAFB]" size={24} /> },
-    {
-      name: "Tailwind CSS",
-      icon: <SiTailwindcss className="text-[#06B6D4]" size={24} />,
-    },
-    { name: "HTML", icon: <SiHtml5 className="text-[#E34F26]" size={24} /> },
-    {
-      name: "TypeScript",
-      icon: <SiTypescript className="text-[#3178C6]" size={24} />,
-    },
-    { name: "CSS", icon: <SiCss3 className="text-[#1572B6]" size={24} /> },
-    {
-      name: "Springboot",
-      icon: <SiSpring className="text-[#6DB33F]" size={24} />,
-    },
-    {
-      name: "Java",
-      icon: <SiJavascript className="text-[#007396]" size={24} />,
-    },
-  ];
+  const skills = {
+    frontend: [
+      { name: "React", icon: <SiReact className="text-[#61DAFB]" size={24} /> },
+      { name: "TypeScript", icon: <SiTypescript className="text-[#3178C6]" size={24} /> },
+      { name: "HTML5", icon: <SiHtml5 className="text-[#E34F26]" size={24} /> },
+      { name: "CSS3", icon: <SiCss3 className="text-[#1572B6]" size={24} /> },
+      { name: "Tailwind CSS", icon: <SiTailwindcss className="text-[#06B6D4]" size={24} /> }
+    ],
+    backend: [
+      { name: "Java", icon: <FaJava className="text-[#007396]" size={24} /> },
+      { name: "Spring Boot", icon: <SiSpring className="text-[#6DB33F]" size={24} /> },
+      { name: "PostgreSQL", icon: <SiPostgresql className="text-[#336791]" size={24} /> },
+    ],
+    devops: [
+      { name: "Docker", icon: <SiDocker className="text-[#2496ED]" size={24} /> },
+      { name: "GitHub Actions", icon: <SiGithubactions className="text-[#2088FF]" size={24} /> },
+    ]
+  };
 
   const [rotate, setRotate] = useState({ x: 0, y: 0 });
 
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = "/Tarek-Jlassi-Monastiri-CV-Anglais.pdf";
+    link.href = "/resume/Tarek-Jlassi-Monastiri%20CV%20Anglais.pdf";
     link.download = "Tarek-Jlassi-Monastiri-CV-Anglais.pdf";
     document.body.appendChild(link);
     link.click();
@@ -138,19 +138,22 @@ export default function About() {
 
             <div className="space-y-4 text-gray-200 mb-8">
               <p>
-                I'm a passionate frontend developer with 3+ years of experience
-                creating modern web applications. I specialize in the React
-                ecosystem and love building interactive, performant user
-                interfaces.
+                I'm a <span className="text-cyan-400 font-medium">Software Engineer</span> from{" "}
+                <span className="text-blue-400 inline-flex items-center">
+                  Tunisia
+                  <img 
+                    src="/tunisia-flag.svg" 
+                    alt="Tunisia Flag" 
+                    className="ml-2 w-5 h-5 object-contain"
+                  />
+                </span>, holding a Bachelor's degree in{" "}
+                <span className="font-medium">Software Engineering and Information Systems</span>. My technical foundation combines academic rigor with hands-on development experience.
               </p>
               <p>
-                My creativity helps me bridge the gap between aesthetics and
-                functionality, creating products that are both beautiful and
-                intuitive.
+                I specialize in building <span className="text-red-400">high-performance applications</span> that mirror the precision engineering of BMW's finest machines - where every line of code is crafted with the same attention to detail as their legendary M series.
               </p>
               <p>
-                When I'm not coding, you'll find me working out, enjoying late
-                night drives, or watching movies.
+                When I'm not coding, you'll find me working out, enjoying late night drives, or watching movies. My passion for both technology and automotive excellence drives me to create solutions that are both powerful and elegant.
               </p>
             </div>
 
@@ -160,22 +163,67 @@ export default function About() {
                 <span className="text-cyan-400">/</span>
                 <span className="text-blue-400">/</span>
                 <span className="text-red-400">/</span>
-                <span>My Skills</span>
+                <span>Technical Expertise</span>
               </h4>
-              <div className="flex flex-wrap gap-3">
-                {skills.map((skill, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ scale: 0 }}
-                    animate={{ scale: 1 }}
-                    transition={{ delay: 0.1 * index }}
-                    className="px-4 py-2 bg-white/10 hover:bg-white/20 transition-colors rounded-full shadow-sm border border-white/10 flex items-center gap-2"
-                    title={skill.name}
-                  >
-                    {skill.icon}
-                    <span className="sr-only">{skill.name}</span>
-                  </motion.div>
-                ))}
+              
+              {/* Frontend Skills */}
+              <div className="mb-6">
+                <h5 className="text-lg font-medium text-cyan-400 mb-3">Frontend Development</h5>
+                <div className="flex flex-wrap gap-3">
+                  {skills.frontend.map((skill, index) => (
+                    <motion.div
+                      key={index}
+                      initial={{ scale: 0 }}
+                      animate={{ scale: 1 }}
+                      transition={{ delay: 0.1 * index }}
+                      className="px-4 py-2 bg-cyan-900/30 hover:bg-cyan-900/50 transition-colors rounded-full shadow-sm border border-cyan-400/20 flex items-center gap-2"
+                      title={skill.name}
+                    >
+                      {skill.icon}
+                      <span className="text-sm text-gray-200">{skill.name}</span>
+                    </motion.div>
+                  ))}
+                </div>
+              </div>
+              
+              {/* Backend Skills */}
+              <div className="mb-6">
+                <h5 className="text-lg font-medium text-blue-400 mb-3">Backend Development</h5>
+                <div className="flex flex-wrap gap-3">
+                  {skills.backend.map((skill, index) => (
+                    <motion.div
+                      key={index}
+                      initial={{ scale: 0 }}
+                      animate={{ scale: 1 }}
+                      transition={{ delay: 0.1 * (index + skills.frontend.length) }}
+                      className="px-4 py-2 bg-blue-900/30 hover:bg-blue-900/50 transition-colors rounded-full shadow-sm border border-blue-400/20 flex items-center gap-2"
+                      title={skill.name}
+                    >
+                      {skill.icon}
+                      <span className="text-sm text-gray-200">{skill.name}</span>
+                    </motion.div>
+                  ))}
+                </div>
+              </div>
+              
+              {/* DevOps Skills */}
+              <div className="mb-6">
+                <h5 className="text-lg font-medium text-red-400 mb-3">DevOps & Tools</h5>
+                <div className="flex flex-wrap gap-3">
+                  {skills.devops.map((skill, index) => (
+                    <motion.div
+                      key={index}
+                      initial={{ scale: 0 }}
+                      animate={{ scale: 1 }}
+                      transition={{ delay: 0.1 * (index + skills.frontend.length + skills.backend.length) }}
+                      className="px-4 py-2 bg-red-900/30 hover:bg-red-900/50 transition-colors rounded-full shadow-sm border border-red-400/20 flex items-center gap-2"
+                      title={skill.name}
+                    >
+                      {skill.icon}
+                      <span className="text-sm text-gray-200">{skill.name}</span>
+                    </motion.div>
+                  ))}
+                </div>
               </div>
             </div>
 
