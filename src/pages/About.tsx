@@ -38,8 +38,8 @@ export default function About() {
 
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = "/resume/Tarek-Jlassi-Monastiri%20CV%20Anglais.pdf";
-    link.download = "Tarek-Jlassi-Monastiri-CV-Anglais.pdf";
+    link.href = "/resume/Tarek Jlassi Monastiri CV.pdf";
+    link.download = "Tarek Jlassi Monastiri CV.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
